@@ -1,18 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/nombreUsrlbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hintNombre"
+        android:inputType="textPersonName"
+        android:padding="@dimen/espacio1"
+
+        />
+    <EditText
+        android:id="@+id/contraseñalbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hintContraseña"
+        android:autofillHints="@string/hintContraseña"
+        android:inputType="textPassword"
+        android:padding="@dimen/espacio1"
+
+        />
+    <EditText
+        android:id="@+id/repetirContraseñalbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hintRPass"
+        android:inputType="textPassword"
+        android:padding="@dimen/espacio1"
+        />
+    <EditText
+        android:id="@+id/emaillbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hintEmail"
+        android:inputType="textEmailAddress"
+        android:padding="@dimen/espacio1"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/tipoTarjeta"
+        android:padding="@dimen/espacio2"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+     <RadioGroup
+        android:id="@+id/rGrpTarjetas"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         >
+
+        <RadioButton
+            android:id="@+id/rbtonCredito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/creditoLbl"
+            android:layout_weight="2"
+
+            />
+
+        <RadioButton
+         android:id="@+id/rbtonDebito"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/debitoLbl"
+         android:layout_weight="1"
+         />
+
+     </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/numTarjetalbl"
+            android:layout_width="296dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/hintNumTarjeta"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/codSegTarjetalbl"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/hintCodSeg"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fechaVencimientoLbl"
+        android:padding="@dimen/espacio2"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="mes" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="año" />
+    </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+           android:hint="@string/hintCBU" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+           android:hint="@string/hintAliasCBU" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cargaInicialLbl"
+            android:padding="@dimen/espacio1"
+            />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/terminoYCondLbl"
+            android:padding="@dimen/espacio1" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registrarLbl"
+            android:padding="@dimen/espacio1"/>
+
+
+
+</LinearLayout>
