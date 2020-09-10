@@ -328,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
                       cuentaBancaria.setCbu(cbu.getText().toString());
 
 
-                      //CARGAR TARJETA
+                      //CARGAR TARJETA  TODO CARGAR FECHA DE LA TARJETA USAR CALENDAR
                       Tarjeta tarjeta = new Tarjeta();
                       tarjeta.setNumero(numeroTarjeta.getText().toString());
                       tarjeta.setCcv(ccv.getText().toString());
