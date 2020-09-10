@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".MainActivity">
 
 
@@ -80,6 +81,7 @@
      </RadioGroup>
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -90,17 +92,21 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:enabled="false"
             android:hint="@string/hintNumTarjeta"
-            android:inputType="number" />
+            android:inputType="number"
+            android:maxLength="16"/>
 
         <EditText
             android:id="@+id/codSegTarjetalbl"
             android:layout_width="62dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:enabled="false"
             android:ems="10"
             android:hint="@string/hintCodSeg"
-            android:inputType="number" />
+            android:inputType="number"
+            android:maxLength="3"/>
     </LinearLayout>
 
     <TextView
@@ -115,62 +121,84 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/etMesTarjeta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="mes" />
+            android:enabled="false"
+            android:inputType="number"
+            android:maxLength="2"
+            android:hint="mes" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/etAñoTarjeta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="año" />
+            android:enabled="false"
+            android:inputType="number"
+            android:maxLength="2"
+            android:hint="año" />
     </LinearLayout>
 
 
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/cbuUsrlbl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="number"
            android:hint="@string/hintCBU" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/aliasUsrlbl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="number"
            android:hint="@string/hintAliasCBU" />
 
         <Switch
-            android:id="@+id/switch1"
+            android:id="@+id/switchCargaInicial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/cargaInicialLbl"
             android:padding="@dimen/espacio1"
             />
+<TextView
+    android:id="@+id/cargainciallbl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Carga Inicial"
+    android:visibility="gone"
+    />
+    <SeekBar
+        android:id="@+id/seekBarCargaInicial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:max="1500"
+        android:min="0"
 
-        <CheckBox
-            android:id="@+id/checkBox"
+
+        />
+
+    <CheckBox
+            android:id="@+id/cbTerminoYCond"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terminoYCondLbl"
             android:padding="@dimen/espacio1" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnRegistrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/registrarLbl"
+            android:enabled="false"
             android:padding="@dimen/espacio1"/>
 
 
